@@ -435,7 +435,7 @@ jobs:
         if: ${{ fromJson(inputs.extras).runasadmin == 'true' }}
         shell: bash
         run: |
-          sed -i sed -i 's/asInvoker/requireAdministrator/' ./flutter/windows/runner/runner.exe.manifest
+          sed -i 's/asInvoker/requireAdministrator/' ./flutter/windows/runner/runner.exe.manifest
 
       - name: Report Status
         uses: fjogeleit/http-request-action@v1
